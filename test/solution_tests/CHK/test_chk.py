@@ -6,7 +6,7 @@ class TestSum():
         assert checkout_solution.checkout("A") == 50
 
     def test_eight_A(self):
-        assert checkout_solution.checkout("AAAAAAAA") == 360
+        assert checkout_solution.checkout("AAAAAAAAA") == 200 + 130 + 50
 
     def test_one_A(self):
         assert checkout_solution.checkout("A") == 50
@@ -26,8 +26,11 @@ class TestSum():
     def test_three_D(self):
         assert checkout_solution.checkout("DDD") == 45
 
+    def test_two_E(self):
+        assert checkout_solution.checkout("EE") == 45
+
     def test_not_recogised_sku(self):
-        assert checkout_solution.checkout("E") == -1
+        assert checkout_solution.checkout("-") == -1
         
     def test_no_sku(self):
         assert checkout_solution.checkout("") == 0

@@ -5,7 +5,7 @@ from collections import defaultdict
 def checkout(skus):
     sku_count = defaultdict(int)
     for char in skus:
-        if char not in 'ABCD':
+        if char not in 'ABCDE':
             return -1
         sku_count[char] += 1
         
