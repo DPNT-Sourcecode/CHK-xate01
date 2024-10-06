@@ -9,5 +9,6 @@ def checkout(skus):
             return -1
         sku_count[char] += 1
     print(sku_count)
+    return 1
 
 
