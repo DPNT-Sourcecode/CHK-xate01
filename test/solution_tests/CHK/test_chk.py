@@ -66,10 +66,10 @@ class TestSum():
         assert checkout_solution.checkout("I") == 35
 
     def test_two_K(self):
-        assert checkout_solution.checkout("KK") == 150
+        assert checkout_solution.checkout("KK") == 120
 
     def test_one_K(self):
-        assert checkout_solution.checkout("K") == 80
+        assert checkout_solution.checkout("K") == 70
 
     def test_four_N_one_M(self):
         assert checkout_solution.checkout("NNNNM") == 160
@@ -98,12 +98,25 @@ class TestSum():
     def test_one_W(self):
         assert checkout_solution.checkout("W") == 20
 
+    def test_one_S(self):
+        assert checkout_solution.checkout("S") == 20
+
     def test_one_T(self):
         assert checkout_solution.checkout("T") == 20
+
+    def test_one_X(self):
+        assert checkout_solution.checkout("X") == 17
+
+    def test_one_Y(self):
+        assert checkout_solution.checkout("Y") == 20
+
+    def test_one_Z(self):
+        assert checkout_solution.checkout("Z") == 21
 
     def test_not_recogised_sku(self):
         assert checkout_solution.checkout("-") == -1
 
     def test_no_sku(self):
         assert checkout_solution.checkout("") == 0
+
 
