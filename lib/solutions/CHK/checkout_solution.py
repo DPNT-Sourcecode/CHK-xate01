@@ -114,8 +114,21 @@ def checkout(skus):
     stxyz_group = sku_count['S'] + sku_count['T'] + sku_count['X'] + sku_count['Y'] + sku_count['Z']
     sets_of_three = stxyz_group // 3
     checkout_value += sets_of_three * 45
+    
+    for char in 'STXYZ':
+        if char == 'S':
+            checkout_value += sku_count[char] * 20
+        elif char == 'T':
+            checkout_value += sku_count[char] * 20
+        elif char == 'X':
+            checkout_value += sku_count[char] * 17
+        elif char == 'Y':
+            checkout_value += sku_count[char] * 20
+        elif char == 'Z':
+            checkout_value += sku_count[char] * 21
             
     return checkout_value
+
 
 
 
