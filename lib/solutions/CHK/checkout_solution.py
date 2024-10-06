@@ -37,7 +37,8 @@ def checkout(skus):
         elif key == 'E':
             checkout_value += value * 40
             if 'B' in sku_count.keys() and value >= 2:
-                checkout_value -= 30
+                for _ in range(value // 2):
+                    checkout_value -= 30
             
     return checkout_value
 
