@@ -111,23 +111,30 @@ def checkout(skus):
         elif key == 'W':
             checkout_value += sku_count[key] * 20
             
-    stxyz_group = sku_count['S'] + sku_count['T'] + sku_count['X'] + sku_count['Y'] + sku_count['Z']
-    sets_of_three = stxyz_group // 3
-    checkout_value += sets_of_three * 45
-    
-    for char in 'STXYZ':
-        if char == 'S':
-            checkout_value += (max(0, sku_count[char] - sets_of_three)) * 20
-        elif char == 'T':
-            checkout_value += (max(0, sku_count[char] - sets_of_three)) * 20
-        elif char == 'X':
-            checkout_value += (max(0, sku_count[char] - sets_of_three)) * 17
-        elif char == 'Y':
-            checkout_value += (max(0, sku_count[char] - sets_of_three)) * 20
-        elif char == 'Z':
-            checkout_value += (max(0, sku_count[char] - sets_of_three)) * 21
+    group_items = []
+    for key in ['S', 'T', 'X', 'Y', 'Z']:
+        group_items.extend([key] * sku_count[key])
+
+    group_items = sorted(group_items, key=lambda item: {'S': 20, 'T': 20, 'X': 17, 'Y': 20, 'Z': 21}[item], reverse=True)
+
+    sets_of_three = len(group_items) // 3
+    remaining_items = len(group_items) % 3
+
+    checkout_value += (sets_of_three * 45)
+
+    if remaining_items:
+        for item in group_items[-remaining_items:]:
+            if item == 'S':
+                checkout_value += 20
+            elif item == 'T':
+                checkout_value += 20
+            elif item == 'X':
+                checkout_value += 17
+            elif item == 'Y':
+                checkout_value += 20
+            elif item == 'Z':
+                checkout_value += 21
             
     return checkout_value
 
 checkout("SSS")
-
