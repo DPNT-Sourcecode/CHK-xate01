@@ -18,3 +18,15 @@ def checkout(skus):
                 (sets_of_three * 130) +
                 (remaining * 50)
             )
+        elif key == 'B':
+            sets_of_two = value // 2
+            remaining = value % 2
+            checkout_value += (
+                (sets_of_two * 45) +
+                (remaining * 30)
+            )
+        elif key == 'C':
+            checkout_value += (value * 20)
+        else:
+            checkout_value += (value * 15)
+

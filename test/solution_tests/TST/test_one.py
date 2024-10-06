@@ -7,3 +7,7 @@ class TestSum():
 
     def test_not_recogised_sku(self):
         assert checkout_solution.checkout("E") == -1
+        
+    def test_eight_A(self):
+        assert checkout_solution.checkout("AAAAAAAA") == 360
+
