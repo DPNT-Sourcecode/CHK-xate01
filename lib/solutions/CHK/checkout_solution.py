@@ -117,17 +117,18 @@ def checkout(skus):
     
     for char in 'STXYZ':
         if char == 'S':
-            checkout_value += (sku_count[char] - sets_of_three) * 20
+            checkout_value += (max(0, sku_count[char] - sets_of_three)) * 20
         elif char == 'T':
-            checkout_value += (sku_count[char] - sets_of_three) * 20
+            checkout_value += (max(0, sku_count[char] - sets_of_three)) * 20
         elif char == 'X':
-            checkout_value += (sku_count[char] - sets_of_three) * 17
+            checkout_value += (max(0, sku_count[char] - sets_of_three)) * 17
         elif char == 'Y':
-            checkout_value += (sku_count[char] - sets_of_three) * 20
+            checkout_value += (max(0, sku_count[char] - sets_of_three)) * 20
         elif char == 'Z':
-            checkout_value += sku_count[char] * 21
+            checkout_value += (max(0, sku_count[char] - sets_of_three)) * 21
             
     return checkout_value
+
 
 
 
