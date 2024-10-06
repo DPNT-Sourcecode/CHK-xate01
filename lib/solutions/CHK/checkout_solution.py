@@ -122,4 +122,3 @@ def checkout(skus):
             checkout_value += sku_count[key] * 50
             
     return checkout_value
-
