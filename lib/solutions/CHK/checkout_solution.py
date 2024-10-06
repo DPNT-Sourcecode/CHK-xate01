@@ -128,3 +128,6 @@ def checkout(skus):
             checkout_value += (max(0, sku_count[char] - sets_of_three)) * 21
             
     return checkout_value
+
+checkout("SSS")
+

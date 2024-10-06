@@ -113,11 +113,15 @@ class TestSum():
     def test_one_Z(self):
         assert checkout_solution.checkout("Z") == 21
         
-    def test_one_stx(self):
+    def test_one_STX(self):
         assert checkout_solution.checkout("STX") == 45
+
+    def test_three_S(self):
+        assert checkout_solution.checkout("SSS") == 45
 
     def test_not_recogised_sku(self):
         assert checkout_solution.checkout("-") == -1
 
     def test_no_sku(self):
         assert checkout_solution.checkout("") == 0
+
