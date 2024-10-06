@@ -26,8 +26,8 @@ class TestSum():
     def test_three_D(self):
         assert checkout_solution.checkout("DDD") == 45
 
-    def test_two_E(self):
-        assert checkout_solution.checkout("EE") == 45
+    def test_one_E(self):
+        assert checkout_solution.checkout("E") == 45
 
     def test_not_recogised_sku(self):
         assert checkout_solution.checkout("-") == -1
