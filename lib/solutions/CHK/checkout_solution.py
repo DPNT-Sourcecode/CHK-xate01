@@ -38,7 +38,7 @@ def checkout(skus):
             if 'B' in sku_count.keys() and value >= 2:
                 for _ in range(value // 2):
                     sku_count['B'] -= 1
+        elif key == 'F':
+            sets_of_three = value // 3
             
     return checkout_value
-
-checkout("EEEEBB")
