@@ -95,10 +95,6 @@ def checkout(skus):
             if 'Q' in sku_count.keys() and sku_count[key] >= 3:
                 for _ in range(sku_count[key] // 3):
                     sku_count['Q'] -= 1
-        elif key == 'S':
-            checkout_value += sku_count[key] * 30
-        elif key == 'T':
-            checkout_value += sku_count[key] * 20
         elif key == 'U':
             sets_of_four = sku_count[key] // 4
             checkout_value += (sku_count[key] - sets_of_four) * 40
@@ -114,11 +110,8 @@ def checkout(skus):
             )
         elif key == 'W':
             checkout_value += sku_count[key] * 20
-        elif key == 'X':
-            checkout_value += sku_count[key] * 90
-        elif key == 'Y':
-            checkout_value += sku_count[key] * 10
-        elif key == 'Z':
-            checkout_value += sku_count[key] * 50
+        elif key in 'STXYZ':
+            pass
             
     return checkout_value
+

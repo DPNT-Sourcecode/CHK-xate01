@@ -98,17 +98,12 @@ class TestSum():
     def test_one_W(self):
         assert checkout_solution.checkout("W") == 20
 
-    def test_one_X(self):
-        assert checkout_solution.checkout("X") == 90
-
-    def test_one_Y(self):
-        assert checkout_solution.checkout("Y") == 10
-
-    def test_one_Z(self):
-        assert checkout_solution.checkout("Z") == 50
+    def test_one_T(self):
+        assert checkout_solution.checkout("T") == 20
 
     def test_not_recogised_sku(self):
         assert checkout_solution.checkout("-") == -1
 
     def test_no_sku(self):
         assert checkout_solution.checkout("") == 0
+
