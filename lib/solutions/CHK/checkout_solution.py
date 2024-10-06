@@ -3,6 +3,6 @@
 # noinspection PyUnusedLocal
 # skus = unicode string
 def checkout(skus):
-    print(skus)
-    return -1
+    return skus
+
 
