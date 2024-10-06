@@ -36,7 +36,7 @@ class TestSum():
         assert checkout_solution.checkout("EEB") == 80
 
     def test_two_E_two_B(self):
-        assert checkout_solution.checkout("EEBB") == 80 + 45 - 30
+        assert checkout_solution.checkout("EEBB") == 110
         
     def test_four_E_two_B(self):
         assert checkout_solution.checkout("EEEEBB") == 160

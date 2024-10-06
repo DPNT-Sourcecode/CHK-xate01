@@ -10,7 +10,8 @@ def checkout(skus):
         sku_count[char] += 1
         
     checkout_value = 0
-    for key, value in sku_count.items():
+    for key in sorted(sku_count.keys())[::-1]:
+        value = sku_count[key]
         if key == 'A':
             sets_of_five = value // 5
             remaining = value % 5
@@ -36,7 +37,7 @@ def checkout(skus):
             checkout_value += value * 40
             if 'B' in sku_count.keys() and value >= 2:
                 for _ in range(value // 2):
-                    checkout_value -= 30
+                    sku_count['B'] -= 1
             
     return checkout_value
 
