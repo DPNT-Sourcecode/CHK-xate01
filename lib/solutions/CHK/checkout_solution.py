@@ -42,6 +42,4 @@ def checkout(skus):
             
     return checkout_value
 
-
-
-
+checkout("EEEEBB")

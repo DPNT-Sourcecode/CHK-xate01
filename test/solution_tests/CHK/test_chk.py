@@ -49,5 +49,3 @@ class TestSum():
         
     def test_no_sku(self):
         assert checkout_solution.checkout("") == 0
-
-
