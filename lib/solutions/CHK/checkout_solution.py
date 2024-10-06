@@ -62,7 +62,7 @@ def checkout(skus):
             sets_of_two = sku_count[key] // 2
             remaining = sku_count[key] % 2
             checkout_value += (
-                (sets_of_two * 150) +
+                (sets_of_two * 120) +
                 (remaining * 80)
             )
         elif key == 'L':
@@ -114,4 +114,5 @@ def checkout(skus):
             pass
             
     return checkout_value
+
 
