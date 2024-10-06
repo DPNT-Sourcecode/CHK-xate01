@@ -40,6 +40,15 @@ class TestSum():
         
     def test_four_E_two_B(self):
         assert checkout_solution.checkout("EEEEBB") == 160
+    
+    def test_one_F(self):
+        assert checkout_solution.checkout("F") == 10
+
+    def test_six_F(self):
+        assert checkout_solution.checkout("FFFFFF") == 40
+
+    def test_seven_F(self):
+        assert checkout_solution.checkout("FFFFFFF") == 50
         
     def test_one_of_each(self):
         assert checkout_solution.checkout("ABCDE") == 155
