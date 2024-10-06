@@ -30,7 +30,7 @@ class TestSum():
         assert checkout_solution.checkout("E") == -1
         
     def test_no_sku(self):
-        assert checkout_solution.checkout("") == -1
+        assert checkout_solution.checkout("") == 0
 
 
 

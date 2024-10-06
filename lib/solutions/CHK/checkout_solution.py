@@ -3,9 +3,6 @@ from collections import defaultdict
 # noinspection PyUnusedLocal
 # skus = unicode string
 def checkout(skus):
-    if not skus:
-        return -1
-
     sku_count = defaultdict(int)
     for char in skus:
         if char not in 'ABCD':
