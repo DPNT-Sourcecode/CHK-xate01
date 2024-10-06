@@ -29,4 +29,7 @@ def checkout(skus):
             checkout_value += (value * 20)
         else:
             checkout_value += (value * 15)
+            
+    return checkout_value
+
 
