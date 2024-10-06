@@ -11,3 +11,4 @@ def checkout(skus):
         
     checkout_value = 0
     for key, value in sku_count.items():
+        pass
