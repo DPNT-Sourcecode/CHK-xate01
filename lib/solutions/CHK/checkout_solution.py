@@ -31,14 +31,15 @@ def checkout(skus):
                 (remaining * 30)
             )
         elif key == 'C':
-            checkout_value += (value * 20)
+            checkout_value += value * 20
         elif key == 'D':
-            checkout_value += (value * 15)
+            checkout_value += value * 15
         elif key == 'E':
-            checkout_value += (value * 40)
+            checkout_value += value * 40
             if 'B' in sku_count.keys():
                 checkout_value -= 30
             
     return checkout_value
+
 
 
