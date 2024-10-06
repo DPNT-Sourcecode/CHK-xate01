@@ -14,8 +14,18 @@ class TestSum():
     def test_five_B(self):
         assert checkout_solution.checkout("BBBBB") == 120
 
+    def test_one_B(self):
+        assert checkout_solution.checkout("B") == 30
+
+    def test_one_C(self):
+        assert checkout_solution.checkout("C") == 20
+        
+    def test_three_D(self):
+        assert checkout_solution.checkout("DDD") == 45
+
     def test_not_recogised_sku(self):
         assert checkout_solution.checkout("E") == -1
         
+
 
 
