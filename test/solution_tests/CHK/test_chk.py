@@ -37,10 +37,17 @@ class TestSum():
 
     def test_two_E_two_B(self):
         assert checkout_solution.checkout("EEBB") == 80 + 45 - 30
+        
+    def test_four_E_two_B(self):
+        assert checkout_solution.checkout("EEEEBB") == 160
+        
+    def test_one_of_each(self):
+        assert checkout_solution.checkout("ABCDE") == 155
 
     def test_not_recogised_sku(self):
         assert checkout_solution.checkout("-") == -1
         
     def test_no_sku(self):
         assert checkout_solution.checkout("") == 0
+
 
