@@ -112,8 +112,11 @@ def checkout(skus):
             checkout_value += sku_count[key] * 20
             
     stxyz_group = sku_count['S'] + sku_count['T'] + sku_count['X'] + sku_count['Y'] + sku_count['Z']
+    sets_of_three = stxyz_group // 3
+    checkout_value += sets_of_three * 45
             
     return checkout_value
+
 
 
 
